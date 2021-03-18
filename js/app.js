@@ -1,0 +1,5 @@
+import './burger-menu.js'
+import './skills-loop.js'
+import './projects-loop.js'
+import './languages-loop-and-toggle.js'
+import './gallery.js'

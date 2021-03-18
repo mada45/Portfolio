@@ -1,0 +1,261 @@
+.landing-hero {
+	text-align: center;
+	padding-bottom: 6rem;
+}
+
+.landing-hero h1 {
+	margin-bottom: 0.5rem;
+}
+
+.landing-hero p {
+	font-size: clamp(1rem, 1.3vw, 1.3rem);
+}
+
+.landing-hero span {
+	font-weight: 300;
+	font-family: "Rubik", arial, sans-serif;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.landing-hero {
+		text-align: left;
+	}
+
+	.landing-hero img {
+		display: none;
+	}
+
+	.landing-hero span {
+		font-size: clamp(2rem, 3vw, 3rem);
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.landing-hero {
+		padding: 5rem 0 10rem;
+	}
+}
+
+/*####################################################################
+######################################################################
+######################################################################*/
+
+.landing-projects > div {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.landing-project {
+	background: var(--dark-gray);
+	border-radius: 2rem;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+	margin-bottom: 2rem;
+	cursor: pointer;
+	flex: 1 1 13rem;
+}
+
+.landing-project img {
+	width: 100%;
+	border-radius: 2rem 2rem 0 0;
+	min-height: 11.5rem;
+	object-fit: cover;
+}
+
+.landing-project-text {
+	padding: 1rem 2rem 2rem;
+}
+
+.landing-project-text h3 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.landing-project-text p {
+	margin-top: 1rem;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+
+.btn {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.landing-projects > div {
+		display: block;
+	}
+
+	.landing-project {
+		background: none;
+		box-shadow: none;
+	}
+
+	.landing-project a {
+		margin-bottom: 2rem;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+	}
+	.landing-project img {
+		max-width: 23rem;
+		border-radius: 2rem;
+	}
+
+	.landing-project-text {
+		max-width: 40ch;
+	}
+
+	.landing-project-text p {
+		margin: 1rem 0;
+	}
+
+	.btn {
+		display: block;
+		background: var(--red);
+		color: var(--white);
+		border: none;
+		padding: 0.8rem 1.5rem;
+		border-radius: 2rem;
+		box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+
+/*####################################################################
+######################################################################
+######################################################################*/
+
+.skills-section {
+	margin-top: 6rem;
+}
+
+.skill,
+.skill-learning {
+	background: var(--dark-gray);
+	border-radius: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.skill-learning {
+	padding: 1rem;
+	background: transparent;
+	border: var(--dark-gray) solid 5px;
+}
+
+.skill span {
+	background: var(--black);
+	border-radius: 50%;
+	height: 3rem;
+	width: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.5rem;
+	font-size: 1.1rem;
+}
+
+.skill h3 {
+	margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.skills {
+		display: flex;
+		gap: 1rem;
+		align-items: baseline;
+	}
+	.skill,
+	.skill-learning {
+		background: linear-gradient(180deg, var(--red) 0%, var(--dark-red) 100%);
+		flex-direction: column-reverse;
+		height: 20rem;
+		width: 4rem;
+		margin: 0;
+	}
+
+	.skill-learning {
+		background: transparent;
+		padding: 0;
+	}
+
+	.skill:nth-child(1) {
+		height: 15.6rem;
+	}
+
+	.skill:nth-child(1) h3 {
+		transform: rotate(-90deg) translate(60%, -35%);
+	}
+
+	.skill:nth-child(2) {
+		height: 14rem;
+	}
+
+	.skill:nth-child(3) {
+		height: 13.6rem;
+	}
+
+	.skill:nth-child(4) {
+		height: 18.8rem;
+	}
+
+	.skill h3,
+	.skill-learning h3 {
+		transform: rotate(-90deg) translate(70%, -30%);
+		font-size: 1.2rem !important;
+	}
+
+	.skill-learning h3 {
+		transform: rotate(-90deg) translate(70%);
+	}
+
+	.skill-learning span {
+		transform: rotate(-90deg) translate(-50%);
+	}
+
+	.skills-section {
+		margin-top: 10rem;
+	}
+}
+
+/*####################################################################
+######################################################################
+######################################################################*/
+
+.landing-about {
+	margin-top: 6rem;
+}
+
+.landing-about > article {
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.landing-about .image-of-me {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.landing-about .image-of-me {
+		display: block;
+	}
+
+	.landing-about p {
+		max-width: 40ch;
+	}
+
+	.landing-about {
+		margin-top: 10rem;
+	}
+}

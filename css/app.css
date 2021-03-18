@@ -1,0 +1,178 @@
+@import "./projects.css";
+@import "./nav.css";
+@import "./landing.css";
+@import "./about.css";
+@import "./twitter-clone.css";
+
+:root {
+	--white: #e2e9f2;
+	--gray: #abb8c2;
+	--dark-gray: #323941;
+	--black: #242729;
+	--red: #8c253e;
+	--dark-red: #540c1e;
+}
+
+h1 {
+	font-family: "Rubik", arial, sans-serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+#logo {
+	font-family: "Rubik", arial, sans-serif;
+	font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+	font-weight: 500;
+	position: relative;
+	transition: opacity 0.15s ease-in-out;
+}
+
+#logo:hover {
+	opacity: 0.5;
+}
+
+h2 {
+	font-family: "Rubik", arial, sans-serif;
+	font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+	font-weight: 500;
+	margin-bottom: 2rem;
+}
+
+h3 {
+	font-family: "Rubik", arial, sans-serif;
+	font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: var(--gray);
+}
+
+.see-more-mobile {
+	color: var(--gray);
+	text-decoration: underline;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	font-family: "Rubik", arial, sans-serif;
+	font-weight: 500;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Karla", arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 100;
+	color: var(--white);
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: var(--black);
+	overflow-x: hidden;
+	position: relative;
+}
+
+main {
+	padding: 3rem 2rem;
+}
+
+body::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: var(--black);
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 1rem;
+	background: var(--gray);
+}
+
+footer {
+	padding: 2rem;
+	text-align: center;
+	color: var(--gray);
+	background: var(--dark-gray);
+	margin-top: 6rem;
+}
+
+footer i {
+	color: var(--red);
+	font-size: 2rem;
+	cursor: pointer;
+	transition: opacity 0.15s ease-in-out;
+	margin: 1.5rem 0.2rem 0 0;
+}
+
+footer i:hover {
+	opacity: 0.8;
+}
+
+.resume {
+	display: inline-block;
+	text-decoration: underline;
+	margin-top: 1rem;
+	color: var(--gray);
+}
+
+footer .resume {
+	margin-top: 0.5rem;
+}
+
+.image-of-me {
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
+	object-position: 0 -1rem;
+	border-radius: 2rem;
+	margin-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		display: grid;
+		justify-items: center;
+	}
+
+	main {
+		width: 768px;
+	}
+
+	footer {
+		width: 100%;
+	}
+	.burger-menu-dropdown-link {
+		font-size: 1.3rem;
+	}
+
+	h1 {
+		font-size: clamp(2rem, 3vw, 3rem);
+	}
+
+	.image-of-me {
+		margin: 0;
+		width: 13rem;
+		height: 13rem;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	footer {
+		max-width: fit-content;
+		margin-right: auto;
+		position: fixed;
+		z-index: 999;
+		text-align: left;
+		bottom: 0;
+		left: 0;
+	}
+}
